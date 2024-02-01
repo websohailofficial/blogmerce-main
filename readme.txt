@@ -30,5 +30,5 @@ BlogMerce includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0 - October 12 2023 =
 * Initial release
