@@ -1,0 +1,366 @@
+/*!
+Theme Name: BlogMerce
+Theme URI: http://blogmerce.com/
+Author: BlogMerce Team
+Author URI: https://webcyberians.io
+Description: A minimal Wordpress Blogs, Business and news theme with advanced features with WooCommerce Support and Multilingual support
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: blogmerce
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.site-title a {
+  color: #ffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+/*--------------------------------------------------------------
+# Blog 
+--------------------------------------------------------------*/
+@media (max-width: 767px) {
+  .blog-single .detail-inner {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-single .meta-info li {
+    margin-bottom: 5px;
+  }
+
+  .blog-single .meta-info li::before {
+    display: none;
+  }
+
+  .blog-single .meta-info li:first-child {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-single .meta-information {
+    padding: 25px;
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .blog-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-section {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+  .sidebar .widget:first-child {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .blog-single a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-single a {
+    font-size: 18px;
+  }
+}
+
+.section {
+  padding: 60px 0;
+  position: relative;
+}
+
+.single-blog {
+  margin-bottom: 30px;
+  overflow: hidden !important;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.164);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.164);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.blog-list {
+  background: #f9f9f9;
+}
+
+.blog-section .single-blog .blog-img {
+  overflow: hidden;
+}
+
+.blog-section .single-blog .post-thumbnail img {
+  width: 100%;
+}
+
+.blog-section .single-blog .blog-content {
+  padding: 30px;
+}
+
+.post-categories li a {
+  color: #723FE4;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-categories {
+  margin: 0;
+  padding: 0;
+}
+
+.post-categories li {
+  list-style: none;
+}
+
+.entry-title a {
+  font-size: 19px;
+  color: #081828;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.entry-title {
+  display: block;
+  margin-top: 5px;
+  line-height: 25px;
+}
+
+.blog-section .single-blog .blog-content p {
+  display: block;
+  margin-top: 20px;
+  color: #888;
+  line-height: 24px;
+}
+
+.blog-section .single-blog .blog-content .autor {
+  position: relative;
+  padding-left: 62px;
+  margin-top: 30px;
+}
+
+.blog-section .single-blog .blog-content .autor .meta-content {
+  margin-left: 4px;
+}
+
+/* Blog single
+----------------------- */
+
+.blog-single .single-inner .main-content-head {
+  -webkit-box-shadow: 0px 1px 20px 0px rgba(32, 32, 32, 0.11);
+  box-shadow: 0px 1px 20px 0px rgba(32, 32, 32, 0.11);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blog-single .detail-inner {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.blog-single .post-thumbnils {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.blog-single .post-thumbnail img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-single .meta-information {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.blog-single .post-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 32px;
+  display: inline-block;
+}
+
+.blog-single .meta-info {
+  margin-top: 25px;
+}
+
+.blog-single .meta-info li {
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.blog-single .meta-info li a {
+  color: #888;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.comment-list,
+.comment-respond {
+  background-color: #fff;
+  padding: 40px;
+  margin-top: 40px;
+  -webkit-box-shadow: 0px 1px 20px 0px rgba(32, 32, 32, 0.11);
+  box-shadow: 0px 1px 20px 0px rgba(32, 32, 32, 0.11);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+h2.comments-title {
+  display: none;
+}
+
+.sidebar .widget {
+  padding: 40px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 20px 0px rgba(32, 32, 32, 0.11);
+  box-shadow: 0px 1px 20px 0px rgba(32, 32, 32, 0.11);
+}
+
+.footer .footer-top {
+  padding: 100px 0;
+  background-color: #081828;
+}
+
+.footer .single-footer h3 {
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 35px;
+  color: #D2D6DC;
+}
+
+
+.footer .single-footer.f-link li {
+  display: block;
+  margin-bottom: 12px;
+}
+
+
+/* Footer Bottom
+----------------------- */
+.footer-bottom {
+  text-align: center;
+  color: #ffffff;
+}
+
+
+
+/* Responsiveness
+-------------------- */
+
+@media (max-width: 767px) {
+  .footer .single-footer {
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+.nav {
+  justify-content: flex-end;
+  height: 70px;
+  align-content: center;
+}
+
+.nav ul {
+  justify-content: flex-end !important;
+  flex-direction: row;
+  display: flex;
+}
+
+.nav ul li {
+  z-index: 1;
+  position: relative;
+  margin-right: 40px;
+}
+
+.header {
+  background-color: #723fe4;
+}
+
+.header .menu-item a {
+  font-size: 15px;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  position: relative;
+  padding: 35px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 600;
+  transition: all 0.3s ease-out 0s;
+  position: relative;
+  text-transform: capitalize;
+}
